@@ -191,7 +191,7 @@ def add_args(parser):
         help="For distributed training: node_index",
     )
     parser.add_argument(
-        "--local_rank",
+        "--local-rank",
         type=int,
         default=-1,
         help="For distributed training: local_rank",

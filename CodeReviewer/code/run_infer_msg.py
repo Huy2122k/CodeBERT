@@ -62,6 +62,7 @@ def eval_epoch_bleu(args, eval_dataloader, model, tokenizer):
                             max_length=args.max_target_length)
         top_preds = list(preds.cpu().numpy())
         pred_ids.extend(top_preds)
+        print("==============", step, len(pred_ids), args.break_cnt)
         if args.break_cnt > 0 and len(pred_ids) >= args.break_cnt:
             break
     # [2:] to remove beginning '<s>' '<msg>'
