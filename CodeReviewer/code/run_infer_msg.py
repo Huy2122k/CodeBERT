@@ -77,12 +77,12 @@ def eval_epoch_bleu(args, eval_dataloader, model, tokenizer):
             golds.append(outdics[-1]["msg"])
     outdics = outdics[:len(pred_nls)]
     golds = golds[:len(pred_nls)]
-    with open(os.path.join(args.output_dir, "preds.txt"), "w", encoding="utf-8") as f:
-        for pred in pred_nls:
-            f.write(pred.strip() + "\n")
-    with open(os.path.join(args.output_dir, "golds.txt"), "w", encoding="utf-8") as f:
-        for gold in golds:
-            f.write(gold.strip() + "\n")
+    # with open(os.path.join(args.output_dir, "preds.txt"), "w", encoding="utf-8") as f:
+    #     for pred in pred_nls:
+    #         f.write(pred.strip() + "\n")
+    # with open(os.path.join(args.output_dir, "golds.txt"), "w", encoding="utf-8") as f:
+    #     for gold in golds:
+    #         f.write(gold.strip() + "\n")
     with open(out_file, "w", encoding="utf-8") as f:
         for i, outdic in enumerate(outdics):
             outdic["gen"] = pred_nls[i]
