@@ -1,24 +1,24 @@
-import os
-import torch
-import logging
 import argparse
-import random
 import json
-from tqdm import tqdm
+import logging
 import multiprocessing
+import os
+import random
 import time
 from itertools import cycle
-from torch.utils.data import DataLoader, RandomSampler, SequentialSampler
-from torch.utils.data import ConcatDataset
-from torch.utils.data.distributed import DistributedSampler
-from transformers import AdamW, get_linear_schedule_with_warmup
-from models import build_or_load_gen_model
-from configs import add_args, set_seed, set_dist
-from torch.nn.parallel import DistributedDataParallel as DDP
-import torch.distributed as dist
-from utils import CommentGenDataset, SimpleGenDataset
-from evaluator.smooth_bleu import bleu_fromstr
 
+import torch
+import torch.distributed as dist
+from configs import add_args, set_dist, set_seed
+from evaluator.smooth_bleu import bleu_fromstr
+from models import build_or_load_gen_model
+from torch.nn.parallel import DistributedDataParallel as DDP
+from torch.utils.data import (ConcatDataset, DataLoader, RandomSampler,
+                              SequentialSampler)
+from torch.utils.data.distributed import DistributedSampler
+from tqdm import tqdm
+from transformers import AdamW, get_linear_schedule_with_warmup
+from utils import CommentGenDataset, SimpleGenDataset
 
 logging.basicConfig(
     format="%(asctime)s - %(levelname)s - %(name)s -   %(message)s",
@@ -190,6 +190,7 @@ def main(args):
             for step, examples in enumerate(train_dataloader, 1):
                 if step == 1:
                     ex = examples[0]
+                    print("HEEEEEEEEEEEEEREERER", len(examples))
                     logger.info(f"batch size: {len(examples)}")
                     logger.info(f"example source: {tokenizer.convert_ids_to_tokens(ex.source_ids)}")
                     # logger.info(f"example label: {tokenizer.convert_ids_to_tokens(ex.source_labels)}")
