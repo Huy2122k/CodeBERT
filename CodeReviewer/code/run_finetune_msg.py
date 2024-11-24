@@ -40,7 +40,7 @@ def get_loaders(data_files, args, tokenizer, pool, eval=False):
             dataset = CommentGenDataset(tokenizer, pool, args, data_file)
         data_len = len(dataset)
         if global_rank == 0:
-            logger.info(f"Data length: {data_len}.")
+            print(f"Data length: {data_len}.")
         if eval:
             sampler = SequentialSampler(dataset)
         else:
@@ -51,8 +51,8 @@ def get_loaders(data_files, args, tokenizer, pool, eval=False):
 
 
 def eval_bleu_epoch(args, eval_dataloader, model, tokenizer):
-    logger.info(f"  ***** Running bleu evaluation on {args.eval_file} *****")
-    logger.info("  Batch size = %d", args.eval_batch_size)
+    print(f"  ***** Running bleu evaluation on {args.eval_file} *****")
+    print("  Batch size = %d", args.eval_batch_size)
     model.eval()
     if hasattr(model, "module"):
         model = model.module
@@ -191,10 +191,10 @@ def main(args):
                 if step == 1:
                     ex = examples[0]
                     print("HEEEEEEEEEEEEEREERER", len(examples))
-                    logger.info(f"batch size: {len(examples)}")
-                    logger.info(f"example source: {tokenizer.convert_ids_to_tokens(ex.source_ids)}")
-                    # logger.info(f"example label: {tokenizer.convert_ids_to_tokens(ex.source_labels)}")
-                    logger.info(f"example target: {tokenizer.convert_ids_to_tokens(ex.target_ids)}")
+                    print(f"batch size: {len(examples)}")
+                    print(f"example source: {tokenizer.convert_ids_to_tokens(ex.source_ids)}")
+                    # print(f"example label: {tokenizer.convert_ids_to_tokens(ex.source_labels)}")
+                    print(f"example target: {tokenizer.convert_ids_to_tokens(ex.target_ids)}")
                 source_ids = torch.tensor(
                     [ex.source_ids for ex in examples], dtype=torch.long
                 ).to(local_rank)
@@ -235,7 +235,7 @@ def main(args):
                             tr_loss * args.gradient_accumulation_steps / nb_tr_steps,
                             4,
                         )
-                        logger.info(
+                        print(
                             "step {}/{}: Train loss {}".format(
                                 global_step,
                                 args.train_steps,
@@ -248,7 +248,7 @@ def main(args):
                     bleu = eval_bleu_epoch(args, valid_dataloader, model, tokenizer)
                     output_dir = os.path.join(args.output_dir, "checkpoints-last" + "-" + str(bleu))
                     save_model(model, optimizer, scheduler, output_dir, config)
-                    logger.info(f"Reach max steps {args.train_steps}.")
+                    print(f"Reach max steps {args.train_steps}.")
                     time.sleep(5)
                     return
                 if args.global_rank == 0 and \
@@ -258,7 +258,7 @@ def main(args):
                     bleu = eval_bleu_epoch(args, valid_dataloader, model, tokenizer)
                     output_dir = os.path.join(args.output_dir, "checkpoints-" + str(global_step) + "-" + str(bleu))
                     save_model(model, optimizer, scheduler, output_dir, config)
-                    logger.info(
+                    print(
                         "Save the {}-step model and optimizer into {}".format(
                             global_step, output_dir
                         )
@@ -272,7 +272,7 @@ if __name__ == "__main__":
     args.cpu_count = multiprocessing.cpu_count()
     # remove long tokenization warning. ref: https://github.com/huggingface/transformers/issues/991
     logging.getLogger("transformers.tokenization_utils_base").setLevel(logging.ERROR)
-    logger.info(args)
+    print(args)
     main(args)
-    logger.info("Training finished.")
+    print("Training finished.")
     # torch.multiprocessing.spawn(main, args=(args,), nprocs=torch.cuda.device_count())
