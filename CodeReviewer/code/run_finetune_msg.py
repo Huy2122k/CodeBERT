@@ -190,11 +190,7 @@ def main(args):
             for step, examples in enumerate(train_dataloader, 1):
                 if step == 1:
                     ex = examples[0]
-                    print("HEEEEEEEEEEEEEREERER", len(examples))
                     print(f"batch size: {len(examples)}")
-                    print(f"example source: {tokenizer.convert_ids_to_tokens(ex.source_ids)}")
-                    # print(f"example label: {tokenizer.convert_ids_to_tokens(ex.source_labels)}")
-                    print(f"example target: {tokenizer.convert_ids_to_tokens(ex.target_ids)}")
                 source_ids = torch.tensor(
                     [ex.source_ids for ex in examples], dtype=torch.long
                 ).to(local_rank)
