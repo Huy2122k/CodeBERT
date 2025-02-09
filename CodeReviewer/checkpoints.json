@@ -1,0 +1,298 @@
+checkpoints - 2000 - 2.39
+checkpoints - 4000 - 3.18
+checkpoints - 6000 - 3.31
+checkpoints - 8000 - 3.38
+checkpoints - 10000 - 3.19
+checkpoints - 13000 - 3.46
+loss_log = {
+    "100": 3.867,
+    "200": 3.506,
+    "300": 3.303,
+    "400": 3.173,
+    "500": 3.097,
+    "600": 3.03,
+    "700": 2.995,
+    "800": 2.967,
+    "900": 2.935,
+    "1000": 2.906,
+    "1100": 2.882,
+    "1200": 2.676,
+    "1300": 2.64,
+    "1400": 2.611,
+    "1500": 2.597,
+    "1600": 2.576,
+    "1700": 2.562,
+    "1800": 2.555,
+    "1900": 2.555,
+    "2000": 2.546,
+    "2300": 2.566,
+    "2400": 2.463,
+    "2500": 2.436,
+    "2600": 2.394,
+    "2700": 2.381,
+    "2800": 2.376,
+    "2900": 2.37,
+    "3000": 2.374,
+    "3100": 2.368,
+    "3200": 2.358,
+    "3300": 2.338,
+    "3400": 2.318,
+    "3500": 2.169,
+    "3600": 2.195,
+    "3700": 2.156,
+    "3800": 2.147,
+    "3900": 2.138,
+    "4000": 2.122,
+    "4100": 2.084,
+    "4200": 2.053,
+    "4300": 2.021,
+    "4400": 1.984,
+    "4500": 1.957,
+    "4600": 1.901,
+    "4700": 1.889,
+    "4800": 1.872,
+    "4900": 1.857,
+    "5000": 1.854,
+    "5100": 1.84,
+    "5200": 1.824,
+    "5200": 1.824,
+    "5300": 1.805,
+    "5400": 1.788,
+    "5500": 1.766,
+    "5600": 1.745,
+    "5700": 1.673,
+    "5800": 1.588,
+    "5900": 1.589,
+    "6000": 1.561,
+    "6100": 1.503,
+    "6200": 1.462,
+    "6300": 1.421,
+    "6400": 1.382,
+    "6500": 1.348,
+    "6600": 1.322,
+    "6700": 1.29,
+    "6800": 1.256,
+    "6900": 1.286,
+    "7000": 1.327,
+    "7100": 1.287,
+    "7200": 1.279,
+    "7300": 1.275,
+    "7400": 1.259,
+    "7500": 1.243,
+    "7600": 1.233,
+    "7700": 1.221,
+    "7800": 1.204,
+    "7900": 1.194,
+    "8000": 1.097,
+    "8100": 0.902,
+    "8200": 0.856,
+    "8300": 0.806,
+    "8400": 0.795,
+    "8500": 0.775,
+    "8600": 0.751,
+    "8700": 0.73,
+    "8800": 0.714,
+    "8900": 0.699,
+    "9000": 0.683,
+    "9100": 0.903,
+    "9200": 0.847,
+    "9300": 0.88,
+    "9100": 0.903,
+    "9200": 0.847,
+    "9300": 0.88,
+    "9400": 0.859,
+    "9500": 0.867,
+    "9600": 0.866,
+    "9700": 0.856,
+    "9800": 0.848,
+    "9900": 0.841,
+    "10000": 0.838
+}
+
+
+step 100 / 30200: Train loss 0.811
+step 200 / 30200: Train loss 0.841
+step 300 / 30200: Train loss 0.812
+step 400 / 30200: Train loss 0.805
+step 500 / 30200: Train loss 0.802
+step 600 / 30200: Train loss 0.776
+step 700 / 30200: Train loss 0.751
+step 800 / 30200: Train loss 0.729
+step 900 / 30200: Train loss 0.701
+step 1000 / 30200: Train loss 0.703
+step 1100 / 30200: Train loss 0.714
+Data length: 13640.
+batch size: 2
+batch size: 2
+step 1200 / 30200: Train loss 0.74
+step 1300 / 30200: Train loss 0.756
+step 1400 / 30200: Train loss 0.734
+step 1500 / 30200: Train loss 0.712
+step 1600 / 30200: Train loss 0.708
+step 1700 / 30200: Train loss 0.689
+step 1800 / 30200: Train loss 0.668
+step 1900 / 30200: Train loss 0.645
+step 2000 / 30200: Train loss 0.622
+step 2100 / 30200: Train loss 0.62
+step 2200 / 30200: Train loss 0.636
+Data length: 13640.
+batch size: 2
+batch size: 2
+step 2300 / 30200: Train loss 0.654
+step 2400 / 30200: Train loss 0.653
+step 2500 / 30200: Train loss 0.656
+step 2600 / 30200: Train loss 0.62
+step 2700 / 30200: Train loss 0.614
+step 2800 / 30200: Train loss 0.607
+step 2900 / 30200: Train loss 0.586
+step 3000 / 30200: Train loss 0.566
+Data length: 1714. **
+    **
+    *
+    Running bleu evaluation on ** ** *
+    Batch size = % d 8
+Total: 1714
+Save the 3000 - step model and optimizer into / kaggle / working / save2 / checkpoints - 3000 - 3.46
+step 3100 / 30200: Train loss 0.528
+step 3200 / 30200: Train loss 0.499
+step 3300 / 30200: Train loss 0.488
+step 3400 / 30200: Train loss 0.476
+Data length: 13640.
+batch size: 2
+batch size: 2
+step 3500 / 30200: Train loss 0.565
+step 3600 / 30200: Train loss 0.584
+
+10000: "1NELHwkDWKsVSxCUqu4GK4jHxSRmSsWzT"
+
+step 100 / 30200: Train loss 0.681
+step 200 / 30200: Train loss 0.705
+step 300 / 30200: Train loss 0.671
+step 400 / 30200: Train loss 0.663
+step 500 / 30200: Train loss 0.659
+step 600 / 30200: Train loss 0.635
+step 700 / 30200: Train loss 0.613
+step 800 / 30200: Train loss 0.596
+step 900 / 30200: Train loss 0.577
+step 1000 / 30200: Train loss 0.583
+step 1100 / 30200: Train loss 0.592
+
+Data length: 13640.
+batch size: 2
+batch size: 2
+step 1200 / 30200: Train loss 0.611
+step 1300 / 30200: Train loss 0.619
+step 1400 / 30200: Train loss 0.598
+step 1500 / 30200: Train loss 0.575
+step 1600 / 30200: Train loss 0.571
+step 1700 / 30200: Train loss 0.553
+step 1800 / 30200: Train loss 0.536
+step 1900 / 30200: Train loss 0.519
+step 2000 / 30200: Train loss 0.503
+Data length: 1714. **
+    **
+    *
+    Running bleu evaluation on ** ** *
+    Batch size = % d 8
+Total: 1714
+Save the 2000 - step model and optimizer into / kaggle / working / save2 / checkpoints - 2000 - 3.49
+step 2100 / 30200: Train loss 0.479
+step 2200 / 30200: Train loss 0.465
+Data length: 13640.
+batch size: 2
+batch size: 2
+step 2300 / 30200: Train loss 0.523
+step 2400 / 30200: Train loss 0.504
+step 2500 / 30200: Train loss 0.507
+step 2600 / 30200: Train loss 0.474
+step 2700 / 30200: Train loss 0.467
+step 2800 / 30200: Train loss 0.462
+step 2900 / 30200: Train loss 0.446
+step 3000 / 30200: Train loss 0.432
+step 3100 / 30200: Train loss 0.423
+step 3200 / 30200: Train loss 0.419
+step 3300 / 30200: Train loss 0.425
+step 3400 / 30200: Train loss 0.425
+Data length: 13640.
+batch size: 2
+batch size: 2
+step 3500 / 30200: Train loss 0.423
+step 3600 / 30200: Train loss 0.436
+step 3700 / 30200: Train loss 0.415
+step 3800 / 30200: Train loss 0.409
+step 3900 / 30200: Train loss 0.408
+step 4000 / 30200: Train loss 0.396
+Data length: 1714. **
+    **
+    *
+    Running bleu evaluation on ** ** *
+    Batch size = % d 8
+Total: 1714
+Save the 4000 - step model and optimizer into / kaggle / working / save2 / checkpoints - 4000 - 3.5
+step 4100 / 30200: Train loss 0.363
+step 4200 / 30200: Train loss 0.338
+step 4300 / 30200: Train loss 0.318
+step 4400 / 30200: Train loss 0.305
+step 4500 / 30200: Train loss 0.296
+Data length: 13640.
+batch size: 2
+batch size: 2
+step 4600 / 30200: Train loss 0.357
+step 4700 / 30200: Train loss 0.358
+step 4800 / 30200: Train loss 0.356
+step 4900 / 30200: Train loss 0.341
+step 5000 / 30200: Train loss 0.343
+step 5100 / 30200: Train loss 0.337
+step 5200 / 30200: Train loss 0.329
+step 5300 / 30200: Train loss 0.321
+step 5400 / 30200: Train loss 0.314
+step 5500 / 30200: Train loss 0.314
+step 5600 / 30200: Train loss 0.315
+Data length: 13640.
+batch size: 2
+batch size: 2
+step 5700 / 30200: Train loss 0.33
+step 5800 / 30200: Train loss 0.29
+step 5900 / 30200: Train loss 0.303
+step 6000 / 30200: Train loss 0.289
+Data length: 1714. **
+    **
+    *
+    Running bleu evaluation on ** ** *
+    Batch size = % d 8
+Total: 1714
+Save the 6000 - step model and optimizer into / kaggle / working / save2 / checkpoints - 6000 - 3.35
+step 6100 / 30200: Train loss 0.259
+step 6200 / 30200: Train loss 0.242
+step 6300 / 30200: Train loss 0.226
+step 6400 / 30200: Train loss 0.208
+step 6500 / 30200: Train loss 0.197
+step 6600 / 30200: Train loss 0.189
+step 6700 / 30200: Train loss 0.184
+step 6800 / 30200: Train loss 0.176
+Data length: 13640.
+batch size: 2
+batch size: 2
+step 6900 / 30200: Train loss 0.233
+step 7000 / 30200: Train loss 0.251
+step 7100 / 30200: Train loss 0.239
+step 7200 / 30200: Train loss 0.238
+step 7300 / 30200: Train loss 0.24
+step 7400 / 30200: Train loss 0.235
+step 7500 / 30200: Train loss 0.228
+step 7600 / 30200: Train loss 0.223
+step 7700 / 30200: Train loss 0.219
+step 7800 / 30200: Train loss 0.22
+step 7900 / 30200: Train loss 0.22
+Data length: 13640.
+batch size: 2
+batch size: 2
+step 8000 / 30200: Train loss 0.197
+Data length: 1714. **
+    **
+    *
+    Running bleu evaluation on ** ** *
+    Batch size = % d 8
+Total: 1714
+Save the 8000 - step model and optimizer into / kaggle / working / save2 / checkpoints - 8000 - 3.54
+step 8100 / 30200: Train loss 0.15
